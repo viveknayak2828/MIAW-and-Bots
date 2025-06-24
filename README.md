@@ -1,18 +1,62 @@
-# Salesforce DX Project: Next Steps
+MIAW Setup Guide
+Setting Up Messaging for In-App and Web (MIAW)
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+1. Enable Messaging Settings
+From Setup, enable Messaging Settings and assign the Service Cloud license to the agent.
 
-## How Do You Plan to Deploy Your Changes?
+2. Create and Assign Permission Set
+Create a new Permission Set.
+Go to App Permissions and enable Messaging for In-App and Web.
+Assign this permission set to the agent.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+3. Set Up Omni-Channel
+Configure Omni-Channel to manage agent availability and routing.
 
-## Configure Your Salesforce DX Project
+4. Create a Messaging Channel
+•From Setup, create a new Messaging Channel.
+•Set Routing Type to Omni-Flow, and select the MIAW-Omni Flow (explained in the Flows section below).
+•Activate the Messaging Channel.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+5. Create an Embedded Service Deployment
+•Choose MIAW as the channel type.
+•Enter your domain name as the URL (e.g., [your-scratch-org].c.scratch.vf.force.com if testing on Visualforce).
+•Select the Messaging Channel created in the previous step.
 
-## Read All About It
+6. Add Enhanced Conversation Component
+On the Messaging Session record detail page, add the Enhanced Conversation component.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+7. Update Trusted URLs
+Make sure all trusted URLs are updated and reflect your deployment environment.
+
+Flows
+1. MIAW-Omni Flow
+
+This flow checks agent availability and routes conversations accordingly.
+
+Use the Check Availability for Routing standard flow component to check if agents are available.
+Add a Decision Element to branch logic based on agent availability.
+If agents are online (Alpha path):
+Use Update Record to link the Messaging Session ID.
+Pass pre-chat information using custom variables.
+Use Create Record to create a Case.
+Use Assignment to store the Case in a variable.
+Use another Update Record to map pre-chat data to the Messaging Session.
+Use Route Work to assign it to the Alpha bot.
+If agents are offline (Beta path):
+Similar steps as above: update Messaging Session ID and variables.
+Use Route Work to assign the session to the Beta bot.
+2. MIAW-Outbound Flow
+
+Handles routing from the Alpha Bot to a live agent when agents are online.
+
+Eisenstein Bots
+Two bots are required to manage different outcomes from the MIAW-Omni Flow:
+
+Alpha Bot
+Engages customers when agents are available.
+Uses the outbound Omni-Flow to route chats to agents.
+Can be customized to handle queries as per business needs.
+Beta Bot
+Informs users when agents are offline.
+Prompts the customer to create a case.
+If the customer agrees, the bot creates a Case using pre-chat info and responds with the Case ID.
