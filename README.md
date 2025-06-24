@@ -37,6 +37,10 @@
 
 This flow checks agent availability and routes conversations accordingly.
 
+
+<img width="959" alt="MIAW Omni" src="https://github.com/user-attachments/assets/8822d7a1-0b81-4ae1-a279-f0a52eb6e59f" />
+
+
 • Use the Check Availability for Routing standard flow component to check if agents are available.
 
 • Add a Decision Element to branch logic based on agent availability.
@@ -69,9 +73,14 @@ This flow checks agent availability and routes conversations accordingly.
 
 Handles routing from the Alpha Bot to a live agent when agents are online.
 
+
+<img width="959" alt="MIAW Outbound" src="https://github.com/user-attachments/assets/58c9ad56-62aa-4b17-9e0d-87e4f79c53e9" />
+
+
+
 <h2>Eisenstein Bots</h2> 
 
-**Alpha Bot**
+**1. Alpha Bot**
 
 
 • Engages customers when agents are available.
@@ -81,10 +90,20 @@ Handles routing from the Alpha Bot to a live agent when agents are online.
 • Can be customized to handle queries as per business needs.
 
 
-**Beta Bot**
+<img width="957" alt="Alpha" src="https://github.com/user-attachments/assets/246c29ce-11d1-4204-a806-4ebfa2c0efb3" />
+
+
+
+**2. Beta Bot**
 
 • Informs users when agents are offline.
 
 • Prompts the customer to create a case.
 
 • If the customer agrees, the bot creates a Case using pre-chat info and responds with the Case ID.
+
+
+<img width="959" alt="Beta" src="https://github.com/user-attachments/assets/35939099-b592-44e5-a7a6-8fe771fad4ea" />
+
+
+
