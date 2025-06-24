@@ -106,4 +106,15 @@ Handles routing from the Alpha Bot to a live agent when agents are online.
 <img width="959" alt="Beta" src="https://github.com/user-attachments/assets/35939099-b592-44e5-a7a6-8fe771fad4ea" />
 
 
+Reference articles which wold help to create these bots: 
+
+[Article 1](https://help.salesforce.com/s/articleView?id=service.bots_service_create.htm&type=5)
+
+[Article 2](https://help.salesforce.com/s/articleView?id=service.bots_service_setup_dialog_action.htm&type=5)
+
+[Trailhead 1](https://trailhead.salesforce.com/content/learn/modules/einstein-bots-project-planning/build-and-implement-your-bot)
+
+[Traihead 2](https://trailhead.salesforce.com/content/learn/modules/service_bots_basics)
+
+
 
