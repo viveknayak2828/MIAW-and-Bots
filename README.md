@@ -49,6 +49,11 @@
 • Make sure all trusted URLs are updated and reflect your deployment environment.
 
 
+
+https://github.com/user-attachments/assets/f1ff3a89-0766-48b3-824e-4817f0b03c1c
+
+
+
 <h2>Flows</h2>
 
 **Go throgh the metadata file for reference of the flow.**
