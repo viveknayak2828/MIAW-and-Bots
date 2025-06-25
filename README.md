@@ -3,30 +3,43 @@
 <h2>Setting Up Messaging for In-App and Web (MIAW)</h2>
 
 1. Enable Messaging Settings
+
 • From Setup, enable Messaging Settings and assign the Service Cloud license to the agent.
 
 2. Create and Assign Permission Set
+
 • Create a new Permission Set.
+
 • Go to App Permissions and enable Messaging for In-App and Web.
+
 • Assign this permission set to the agent.
 
 3. Set Up Omni-Channel
+
 • Configure Omni-Channel to manage agent availability and routing.
 
 4. Create a Messaging Channel
+
 •From Setup, create a new Messaging Channel.
+
 •Set Routing Type to Omni-Flow, and select the MIAW-Omni Flow (explained in the Flows section below).
+
 •Activate the Messaging Channel.
 
 5. Create an Embedded Service Deployment
+
 • Choose MIAW as the channel type.
+
 • Enter your domain name as the URL (e.g., [your-scratch-org].c.scratch.vf.force.com if testing on Visualforce).
+
 • Select the Messaging Channel created in the previous step.
 
 6. Add Enhanced Conversation Component
+
 • On the Messaging Session record detail page, add the Enhanced Conversation component.
 
 7. Update Trusted URLs
+
 • Make sure all trusted URLs are updated and reflect your deployment environment.
 
 <h2>Flows</h2>
