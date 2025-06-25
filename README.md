@@ -6,6 +6,7 @@
 
 • From Setup, enable Messaging Settings and assign the Service Cloud license to the agent.
 
+
 2. Create and Assign Permission Set
 
 • Create a new Permission Set.
@@ -14,9 +15,11 @@
 
 • Assign this permission set to the agent.
 
+
 3. Set Up Omni-Channel
 
 • Configure Omni-Channel to manage agent availability and routing.
+
 
 4. Create a Messaging Channel
 
@@ -26,6 +29,7 @@
 
 •Activate the Messaging Channel.
 
+
 5. Create an Embedded Service Deployment
 
 • Choose MIAW as the channel type.
@@ -34,13 +38,16 @@
 
 • Select the Messaging Channel created in the previous step.
 
+
 6. Add Enhanced Conversation Component
 
 • On the Messaging Session record detail page, add the Enhanced Conversation component.
 
+
 7. Update Trusted URLs
 
 • Make sure all trusted URLs are updated and reflect your deployment environment.
+
 
 <h2>Flows</h2>
 
