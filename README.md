@@ -126,7 +126,8 @@ Handles routing from the Alpha Bot to a live agent when agents are online.
 <img width="959" alt="Beta" src="https://github.com/user-attachments/assets/35939099-b592-44e5-a7a6-8fe771fad4ea" />
 
 
-Reference articles which wold help to create these bots: 
+
+Reference articles and trailheads which wold help to create these bots: 
 
 [Article 1](https://help.salesforce.com/s/articleView?id=service.bots_service_create.htm&type=5)
 
